@@ -1,0 +1,105 @@
+.telaPainel {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.cabecalhoPainel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalhoPainel h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #1a1a2e;
+}
+
+.infoUsuario {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.etiquetaPerfil {
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem; /* S11: mínimo 14px */
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.botaoSair {
+  padding: 8px 16px;
+  min-height: 44px; /* S09: alvo de toque ≥ 44px */
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.botaoSair:hover {
+  background: #dc2626;
+}
+
+.conteudoPainel {
+  padding: 32px 24px;
+}
+
+.barraAbas {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+.aba {
+  padding: 10px 20px;
+  min-height: 44px; /* S09: alvo de toque ≥ 44px */
+  background: transparent;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.aba:hover {
+  color: #1e293b;
+  background: #f1f5f9;
+}
+
+.abaAtiva {
+  color: #0f172a;
+  background: white;
+  border-bottom: 2px solid #0f172a;
+  margin-bottom: -10px;
+}
+
+@media (max-width: 480px) {
+  .cabecalhoPainel {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .barraAbas {
+    flex-wrap: wrap;
+  }
+
+  .aba {
+    flex: 1;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 0.875rem; /* S11: mínimo 14px mesmo no mobile */
+  }
+}
